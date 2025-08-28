@@ -1,11 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- //tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- //font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- hind madurai -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+<!-- width: 50px;
+height: 50px; -->
+
     <title>Emergenct hotline</title>
 </head>
-<body>
-    <h1>Assignment -5</h1>
+
+<body class="hind-madurai bg-[#ffffff]">
+
+    <nav class="flex  py-[24px] px-[60px] border-5 border-red-500 justify-between max-w-[1920px] mx-auto">
+        <div class="flex gap-3">
+            <div class="w-[50px] h-[50px]">
+                <img src="./assets/logo.png" alt="">
+            </div>
+            <h1 class="font-bold text-[#006747] text-xl">Emergency <br> Service</h1>
+        </div>
+
+        <!-- //right Side -->
+        <div class="flex gap-5">
+            <!-- //for heart w-[120px] h-[52px] -->
+            <div class="bg-[#41ff6b1a] gap-3  py-[11px] px-[25px] flex flex-row justify-center text-center rounded-[50px]">
+                <h1 class="inter text-center font-black text-[#000000] text-[20px]">0</h1>
+                <div class="w-[30px] h-[30px]">
+                    <img src="./assets/heart.png" alt="">
+                </div>
+            </div>
+
+            <!-- //For coin  -->
+            <div class="bg-[#41ff6b1a] gap-3  py-[12px] px-[25px] flex flex-row justify-center text-center rounded-[50px]">
+                <h1 class="inter text-center font-black text-[#000000] text-[20px]">100</h1>
+                <div class="max-w-[30px] h-[30px]"">
+                    <img src="./assets/coin.png" alt="">
+                </div>
+            </div>
+
+            <!-- //for copy  -->
+            <div class="bg-[#00a63e] py-[12px] px-[25px] flex flex-row justify-center text-center rounded-[50px]">
+                <h1 class="text-white font-bold text-[20px]"><span>2</span> Copy</h1>
+            </div>
+        </div>
+    </nav>
+
+    <!-- //banner section -->
+     <section class="max-w-[1920px] h-240px p-3  mx-auto bg-gradient-to-r from-[#013122] via-[#006747] to-[#013223] justify-center text-center">
+            <div class="max-w-[92px] max-h-[92px] mx-auto m-2 "><img src="./assets/logo.png" alt=""></div>
+            <h1 class="hind-madurai text-[40px] text-[#ffffff] font-bold text-center m-2" >Emergency Service Directory</h1>
+
+            <p class="text-[20px] text-[#ffffff] text-center m-2">
+                Government Emergency Services at Your Fingertip – A Project by  Government of the People's Republic of Bangladesh
+            </p>
+     </section>
+
 </body>
+
 </html>
