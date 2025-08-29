@@ -49,7 +49,7 @@
             <!-- //for heart w-[120px] h-[52px] -->
             <div
                 class="bg-[#41ff6b1a] gap-3  py-[11px] px-[25px] flex flex-row justify-center text-center rounded-[50px]">
-                <h1 class="inter text-center font-black text-[#000000] text-[20px]">0</h1>
+                <h1 id="heart-num" class="inter text-center font-black text-[#000000] text-[20px]">0</h1>
                 <div class="w-[30px] h-[30px]">
                     <img src="./assets/heart.png" alt="">
                 </div>
@@ -58,8 +58,8 @@
             <!-- //For coin  -->
             <div
                 class="bg-[#41ff6b1a] gap-3  py-[12px] px-[25px] flex flex-row justify-center text-center rounded-[50px]">
-                <h1 class="inter text-center font-black text-[#000000] text-[20px]">100</h1>
-                <div class="max-w-[30px] h-[30px]"">
+                <h1 id="coin-number" class=" inter text-center font-black text-[#000000] text-[20px]">100</h1>
+                <div class="max-w-[30px] h-[30px]">
                     <img src=" ./assets/coin.png" alt="">
                 </div>
             </div>
@@ -89,12 +89,12 @@
 
                 <div class=" grid grid-cols-3 gap-8">
 
-                    <div class=" p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+                    <div class=" parent-div p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
                         <div class="flex flex-row justify-between text-center mb-3">
-                            <div class="w-[60px] h-[60px] rounded-[16px] bg-[#ffe3e2] ">
-                                <img src="./assets/emergency.png" alt="">
+                            <div class="w-[60px] rounded-lg p-3.5 bg-[#ffe3e2] ">
+                                <img class="w-[32px] " src="./assets/emergency.png" alt="">
                             </div>
-                            <i class="fa-regular fa-heart h-[24px] w-[24px] p-7"></i>
+                            <i class=" fa-regular fa-heart h-[24px] w-[24px] p-7 text-[24px]"></i>
                         </div>
 
                         <div class="pb-4">
@@ -102,24 +102,24 @@
                             <p class="text-[18px] mb-[16px]">National Emergency</p>
                         </div>
                         <div class="pb-4">
-                            <h1 class="text-2xl font-bold pb-2">999</h1>
+                            <h1 class=" service-number text-2xl font-bold pb-2">999</h1>
                             <div class="bg-[#F2F2F2] mb-[16px] w-fit py-2 px-[16px] rounded-lg">
                                 <p class="text-[18px]">All</p>
                             </div>
-                        
+
                         </div>
                         <div class="">
                             <button class="btn px-10 rounded-xl"> <i class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
+                            <button class="call-btn btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
                     </div>
 
-                    <div class=" p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+                    <div class=" parent-div p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
                         <div class="flex flex-row justify-between text-center mb-3">
-                            <div class="w-[60px] h-[60px] rounded-[16px] bg-[#ffe3e2] ">
-                                <img src="./assets/police.png" alt="">
+                            <div class="w-[60px] p-3.5 rounded-lg bg-[#ffe3e2] ">
+                                <img class="w-[32px]" src="./assets/police.png" alt="">
                             </div>
                             <i class="fa-regular fa-heart h-[24px] w-[24px] p-7"></i>
                         </div>
@@ -129,7 +129,7 @@
                             <p class="text-[18px] mb-[16px]">Police</p>
                         </div>
                         <div class="pb-4">
-                            <h1 class="text-2xl font-bold pb-2">999</h1>
+                            <h1 class="service-number text-2xl font-bold pb-2">999</h1>
                             <div class="bg-[#F2F2F2] mb-[16px] w-fit py-2 px-[16px] rounded-lg">
                                 <p class="text-[18px]">Police</p>
                             </div>
@@ -137,16 +137,16 @@
                         </div>
                         <div>
                             <button class="btn px-10 rounded-xl"> <i class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
+                            <button class="call-btn btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
                     </div>
 
-                    <div class=" p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+                    <div class="parent-div p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
                         <div class="flex flex-row justify-between text-center mb-3">
-                            <div class="w-[60px] h-[60px] rounded-[16px] bg-[#ffe3e2] ">
-                                <img src="./assets/fire-service.png" alt="">
+                            <div class="w-[60px] rounded-lg p-3.5 bg-[#ffe3e2] ">
+                                <img class="w-[32px]" src="./assets/fire-service.png" alt="">
                             </div>
                             <i class="fa-regular fa-heart h-[24px] w-[24px] p-7"></i>
                         </div>
@@ -156,7 +156,7 @@
                             <p class="text-[18px] mb-[16px]">Fire Service</p>
                         </div>
                         <div class="pb-4">
-                            <h1 class="text-2xl font-bold pb-2">999</h1>
+                            <h1 class="service-number text-2xl font-bold pb-2">999</h1>
                             <div class="bg-[#F2F2F2] mb-[16px] w-fit py-2 px-[16px] rounded-lg">
                                 <p class="text-[18px]">Fire</p>
                             </div>
@@ -164,17 +164,17 @@
                         </div>
                         <div>
                             <button class="btn px-10 rounded-xl"> <i class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
+                            <button class="call-btn btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
                     </div>
 
 
-                    <div class=" p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+                    <div class="parent-div p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
                         <div class="flex flex-row justify-between text-center mb-3">
-                            <div class="w-[60px] h-[60px] rounded-[16px] bg-[#ffe3e2] ">
-                                <img src="./assets/ambulance.png" alt="">
+                            <div class="w-[60px] rounded-lg p-3.5 bg-[#ffe3e2] ">
+                                <img class="w-[32px]" src="./assets/ambulance.png" alt="">
                             </div>
                             <i class="fa-regular fa-heart h-[24px] w-[24px] p-7"></i>
                         </div>
@@ -184,7 +184,7 @@
                             <p class="text-[18px] mb-[16px]">Ambulance</p>
                         </div>
                         <div class="pb-4">
-                            <h1 class="text-2xl font-bold pb-2">1994-999999</h1>
+                            <h1 class="service-number text-2xl font-bold pb-2">1994-999999</h1>
                             <div class="bg-[#F2F2F2] mb-[16px] w-fit py-2 px-[16px] rounded-lg">
                                 <p class="text-[18px]">Health</p>
                             </div>
@@ -192,17 +192,17 @@
                         </div>
                         <div>
                             <button class="btn px-10 rounded-xl"> <i class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
+                            <button class="call-btn btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
                     </div>
 
 
-                    <div class=" p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+                    <div class="parent-div p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
                         <div class="flex flex-row justify-between text-center mb-3">
-                            <div class="w-[60px] h-[60px] rounded-[16px] bg-[#ffe3e2] ">
-                                <img src="./assets/emergency.png" alt="">
+                            <div class="w-[60px] rounded-lg p-3.5 bg-[#ffe3e2] ">
+                                <img class="w-[32px]" src="./assets/emergency.png" alt="">
                             </div>
                             <i class="fa-regular fa-heart h-[24px] w-[24px] p-7"></i>
                         </div>
@@ -212,7 +212,7 @@
                             <p class="text-[18px] mb-[16px]">Women & Child Helpline</p>
                         </div>
                         <div class="pb-4">
-                            <h1 class="text-2xl font-bold pb-2">109</h1>
+                            <h1 class="service-number text-2xl font-bold pb-2">109</h1>
                             <div class="bg-[#F2F2F2] mb-[16px] w-fit py-2 px-[16px] rounded-lg">
                                 <p class="text-[18px]">Help</p>
                             </div>
@@ -220,17 +220,17 @@
                         </div>
                         <div>
                             <button class="btn px-10 rounded-xl"> <i class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
+                            <button class="call-btn btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
                     </div>
 
 
-                    <div class=" p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+                    <div class="parent-div p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
                         <div class="flex flex-row justify-between text-center mb-3">
-                            <div class="w-[60px] h-[60px] rounded-[16px] bg-[#ffe3e2] ">
-                                <img src="./assets/emergency.png" alt="">
+                            <div class="w-[60px] rounded-lg p-3.5 bg-[#ffe3e2] ">
+                                <img class="w-[32px]" src="./assets/emergency.png" alt="">
                             </div>
                             <i class="fa-regular fa-heart h-[24px] w-[24px] p-7"></i>
                         </div>
@@ -240,25 +240,25 @@
                             <p class="text-[18px] mb-[16px]">Anti-Corruption</p>
                         </div>
                         <div class="pb-4">
-                            <h1 class="text-2xl font-bold pb-2">106</h1>
+                            <h1 class="service-number text-2xl font-bold pb-2">106</h1>
                             <div class="bg-[#F2F2F2] mb-[16px] w-fit py-2 px-[16px] rounded-lg">
                                 <p class="text-[18px]">Govt.</p>
                             </div>
-                         
+
                         </div>
                         <div>
                             <button class="btn px-10 rounded-xl"> <i class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
+                            <button class="call-btn btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
                     </div>
 
 
-                    <div class=" p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+                    <div class="parent-div p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
                         <div class="flex flex-row justify-between text-center mb-3">
-                            <div class="w-[60px] h-[60px] rounded-[16px] bg-[#ffe3e2] ">
-                                <img src="./assets/emergency.png" alt="">
+                            <div class="w-[60px] rounded-lg p-3.5 bg-[#ffe3e2] ">
+                                <img class="w-[32px]" src="./assets/emergency.png" alt="">
                             </div>
                             <i class="fa-regular fa-heart h-[24px] w-[24px] p-7"></i>
                         </div>
@@ -268,7 +268,7 @@
                             <p class="text-[18px] mb-[16px]">Electricity Outage</p>
                         </div>
                         <div class="pb-4">
-                            <h1 class="text-2xl font-bold pb-2">16216</h1>
+                            <h1 class="service-number text-2xl font-bold pb-2">16216</h1>
                             <div class="bg-[#F2F2F2] mb-[16px] w-fit py-2 px-[16px] rounded-lg">
                                 <p class="text-[18px]">Electricity</p>
                             </div>
@@ -276,17 +276,17 @@
                         </div>
                         <div>
                             <button class="btn px-10 rounded-xl"> <i class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
+                            <button class="call-btn btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
                     </div>
 
 
-                    <div class=" p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+                    <div class="parent-div p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
                         <div class="flex flex-row justify-between text-center mb-3">
-                            <div class="w-[60px] h-[60px] rounded-[16px] bg-[#ffe3e2] ">
-                                <img src="./assets/emergency.png" alt="">
+                            <div class="w-[60px] rounded-lg p-3.5 bg-[#ffe3e2] ">
+                                <img class="w-[32px]" src="./assets/emergency.png" alt="">
                             </div>
                             <i class="fa-regular fa-heart h-[24px] w-[24px] p-7"></i>
                         </div>
@@ -296,7 +296,7 @@
                             <p class="text-[18px] mb-[16px]">Brac</p>
                         </div>
                         <div class="pb-4">
-                            <h1 class="text-2xl font-bold pb-2">16445</h1>
+                            <h1 class="service-number text-2xl font-bold pb-2">16445</h1>
                             <div class="bg-[#F2F2F2] mb-[16px] w-fit py-2 px-[16px] rounded-lg">
                                 <p class="text-[18px]">NGO</p>
                             </div>
@@ -304,17 +304,17 @@
                         </div>
                         <div>
                             <button class="btn px-10 rounded-xl"> <i class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
+                            <button class="call-btn btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
                     </div>
 
 
-                    <div class=" p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
+                    <div class="parent-div p-8 rounded-[12px] shadow-[0px_2px_3px_0px_rgba(0,0,0,0.15)] bg-[#ffffff]">
                         <div class="flex flex-row justify-between text-center mb-3">
-                            <div class="w-[60px] h-[60px] rounded-[16px] bg-[#ffe3e2] ">
-                                <img src="./assets/emergency.png" alt="">
+                            <div class="w-[60px] rounded-lg p-3.5 bg-[#ffe3e2] ">
+                                <img class="w-[32px]" src="./assets/emergency.png" alt="">
                             </div>
                             <i class="fa-regular fa-heart h-[24px] w-[24px] p-7"></i>
                         </div>
@@ -324,7 +324,7 @@
                             <p class="text-[18px] mb-[16px]">Bangladesh Railway</p>
                         </div>
                         <div class="pb-4">
-                            <h1 class="text-2xl font-bold pb-2">163</h1>
+                            <h1 class="service-number text-2xl font-bold pb-2">163</h1>
                             <div class="bg-[#F2F2F2] mb-[16px] w-fit py-2 px-[16px] rounded-lg">
                                 <p class="text-[18px]">Travel</p>
                             </div>
@@ -332,7 +332,7 @@
                         </div>
                         <div>
                             <button class="btn px-10 rounded-xl"> <i class="fa-regular fa-copy"></i> Copy</button>
-                            <button class="btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
+                            <button class="call-btn btn px-10 ml-2 rounded-xl bg-[#00a63e] text-white"><i
                                     class="fa-solid fa-phone"></i>Call</button>
 
                         </div>
@@ -345,12 +345,18 @@
                     <div class="flex justify-between text-center p-4 ">
                         <div class="flex gap-2 pt-1.5 ">
                             <i class="fa-regular fa-clock pt-2"></i>
-                            <h3 class="text-[20px] font-semibold">Call History</h3>
+                            <h3 class=" text-[20px] font-semibold">Call History</h3>
                         </div>
-                         <!--  -->
-                          <button class="btn px-7 bg-[#00a63e] text-white text-[20px] rounded-[50px]"> clear </button>
+                        <!--  -->
+                        <button id="btn-clear" class=" btn px-7 bg-[#00a63e] text-white text-[20px] rounded-[50px]">
+                            clear </button>
+                    </div>
+                    <div id="call-history-content" class="flex flex-col justify-between items-center gap-2 mt-4  p-4 bg-white rounded-3xl">
+
                     </div>
                 </div>
+
+
 
             </div>
         </div>
