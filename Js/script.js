@@ -11,44 +11,27 @@ for(const heart of heartCountClick){
     })
 }
 
+// call button
 
-
-// const call = document.getElementsByClassName('call-btn')
-
-// for (const callbtn of call) {
-//   callbtn.addEventListener("click", function () {
-//     const coin = parseInt(document.getElementById("coin-number").innerText);
-// })
-
-// }
-
-// Initial coin balance
 let coins = 100;
 let callHistory = [];
 
-// Select coin amount display
 const coinDisplay = document.getElementById("coin-number");
 
-// Select all call buttons
-const callButtons = document.querySelectorAll(".call-btn");
-// const callButtons = document.querySelectorAll("call-btn");
 
-// Loop through each Call button
+const callButtons = document.querySelectorAll(".call-btn");
+
 callButtons.forEach(button => {
   button.addEventListener("click", function () {
-    // Check if enough coins
     if (coins >= 20) {
-      // Deduct 20 coins
       coins -= 20;
       coinDisplay.innerText = coins;
 
-      // Get service name & number from card
-      const parentDiv = this.closest(".parent-div"); // safer than parentElement twice
+      const parentDiv = this.closest(".parent-div");
       const serviceName = parentDiv.querySelector("h1");
-    //   const serviceNumber = parentDiv.querySelector("h2");
+
     const serviceNumber = parentDiv.querySelector(".service-number");
 
-      // Make call history object with current time
       const now = new Date();
       const options = { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true };
       const callHistoryObj = {
@@ -57,10 +40,8 @@ callButtons.forEach(button => {
         date: now.toLocaleTimeString([], options).toUpperCase(),
       };
 
-      // Save into history array
       callHistory.push(callHistoryObj);
 
-      // Re-render call history UI
       const historyContainer = document.getElementById("call-history-content");
       historyContainer.innerHTML = "";
       for (const call of callHistory) {
@@ -78,18 +59,40 @@ callButtons.forEach(button => {
         historyContainer.appendChild(div);
       }
 
-      // Alert user
+
       alert(`Calling to: ${serviceName.innerText} - ${serviceNumber.innerText}`);
 
     } else {
-      // Not enough coins
       alert("Alert! Your coin is less than 20");
     }
   });
 });
+
 
 // Clear button feature
 document.getElementById("btn-clear").addEventListener('click', function () {
   document.getElementById("call-history-content").innerHTML = "";
   callHistory = [];
 });
+
+
+let copyClickCounter = 0; 
+
+const copies = document.getElementsByClassName("copy-btn");  
+
+for (const copy of copies){  
+  copy.addEventListener("click", function () {  
+
+    copyClickCounter++;
+    document.getElementById("copy-count").innerText = copyClickCounter;  
+
+    const parentDiv = this.parentElement.parentElement;  
+
+    const serviceNumber = parentDiv.querySelector(".service-number").innerText; 
+
+    navigator.clipboard.writeText(serviceNumber);  
+
+    alert("Service Number Copied")  
+ 
+  })
+}
